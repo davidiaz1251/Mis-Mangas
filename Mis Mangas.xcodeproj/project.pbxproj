@@ -6,17 +6,42 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		635C35602D05033A00A4A159 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635C355A2D05033A00A4A159 /* Preview Assets.xcassets */; };
+		635C35612D05033A00A4A159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635C355C2D05033A00A4A159 /* Assets.xcassets */; };
+		635C35622D05033A00A4A159 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C355D2D05033A00A4A159 /* ContentView.swift */; };
+		635C35632D05033A00A4A159 /* Mis_MangasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C355E2D05033A00A4A159 /* Mis_MangasApp.swift */; };
+		635EC4DB2D16F27C001B421C /* ModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC4DA2D16F27C001B421C /* ModelDTO.swift */; };
+		635EC4DD2D16F345001B421C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC4DC2D16F345001B421C /* Model.swift */; };
+		635EC4E02D284AC6001B421C /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC4DF2D284AC6001B421C /* URL.swift */; };
+		635EC4E22D2852EC001B421C /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC4E12D2852EC001B421C /* URLRequest.swift */; };
+		635EC4E42D29636F001B421C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC4E32D29636F001B421C /* NetworkError.swift */; };
+		635EC4E82D29650A001B421C /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC4E72D29650A001B421C /* URLSession.swift */; };
+		635EC4EA2D2967C2001B421C /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC4E92D2967C2001B421C /* NetworkInteractor.swift */; };
+		635EC4ED2D296C1A001B421C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC4EC2D296C1A001B421C /* Network.swift */; };
+		635EC4F02D297404001B421C /* MangasVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC4EF2D297404001B421C /* MangasVM.swift */; };
+		635EC4F22D2EF9A6001B421C /* mangasPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 635EC4F12D2EF9A6001B421C /* mangasPreview.json */; };
+		635EC4F42D2EFA7E001B421C /* DataPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC4F32D2EFA7E001B421C /* DataPreview.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		635C35492D0502E500A4A159 /* Mis Mangas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mis Mangas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		635C355A2D05033A00A4A159 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		635C355C2D05033A00A4A159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		635C355D2D05033A00A4A159 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		635C355E2D05033A00A4A159 /* Mis_MangasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mis_MangasApp.swift; sourceTree = "<group>"; };
+		635EC4DA2D16F27C001B421C /* ModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDTO.swift; sourceTree = "<group>"; };
+		635EC4DC2D16F345001B421C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		635EC4DF2D284AC6001B421C /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		635EC4E12D2852EC001B421C /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		635EC4E32D29636F001B421C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		635EC4E72D29650A001B421C /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		635EC4E92D2967C2001B421C /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
+		635EC4EC2D296C1A001B421C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		635EC4EF2D297404001B421C /* MangasVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangasVM.swift; sourceTree = "<group>"; };
+		635EC4F12D2EF9A6001B421C /* mangasPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mangasPreview.json; sourceTree = "<group>"; };
+		635EC4F32D2EFA7E001B421C /* DataPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		635C354B2D0502E500A4A159 /* Mis Mangas */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Mis Mangas";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		635C35462D0502E500A4A159 /* Frameworks */ = {
@@ -32,7 +57,7 @@
 		635C35402D0502E500A4A159 = {
 			isa = PBXGroup;
 			children = (
-				635C354B2D0502E500A4A159 /* Mis Mangas */,
+				635C355F2D05033A00A4A159 /* Mis Mangas */,
 				635C354A2D0502E500A4A159 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +68,68 @@
 				635C35492D0502E500A4A159 /* Mis Mangas.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		635C355B2D05033A00A4A159 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				635C355A2D05033A00A4A159 /* Preview Assets.xcassets */,
+				635EC4F12D2EF9A6001B421C /* mangasPreview.json */,
+				635EC4F32D2EFA7E001B421C /* DataPreview.swift */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		635C355F2D05033A00A4A159 /* Mis Mangas */ = {
+			isa = PBXGroup;
+			children = (
+				635C355D2D05033A00A4A159 /* ContentView.swift */,
+				635EC4EE2D2973E4001B421C /* ViewModel */,
+				635EC4EB2D296C02001B421C /* Repository */,
+				635EC4DE2D284AAF001B421C /* Interface */,
+				635EC4D92D16F256001B421C /* Model */,
+				635C355C2D05033A00A4A159 /* Assets.xcassets */,
+				635C355B2D05033A00A4A159 /* Preview Content */,
+				635C355E2D05033A00A4A159 /* Mis_MangasApp.swift */,
+			);
+			path = "Mis Mangas";
+			sourceTree = "<group>";
+		};
+		635EC4D92D16F256001B421C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				635EC4DA2D16F27C001B421C /* ModelDTO.swift */,
+				635EC4DC2D16F345001B421C /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		635EC4DE2D284AAF001B421C /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				635EC4DF2D284AC6001B421C /* URL.swift */,
+				635EC4E12D2852EC001B421C /* URLRequest.swift */,
+				635EC4E32D29636F001B421C /* NetworkError.swift */,
+				635EC4E72D29650A001B421C /* URLSession.swift */,
+				635EC4E92D2967C2001B421C /* NetworkInteractor.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		635EC4EB2D296C02001B421C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				635EC4EC2D296C1A001B421C /* Network.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		635EC4EE2D2973E4001B421C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				635EC4EF2D297404001B421C /* MangasVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +146,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				635C354B2D0502E500A4A159 /* Mis Mangas */,
 			);
 			name = "Mis Mangas";
 			packageProductDependencies = (
@@ -109,6 +193,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635C35602D05033A00A4A159 /* Preview Assets.xcassets in Resources */,
+				635C35612D05033A00A4A159 /* Assets.xcassets in Resources */,
+				635EC4F22D2EF9A6001B421C /* mangasPreview.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +206,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635EC4F42D2EFA7E001B421C /* DataPreview.swift in Sources */,
+				635EC4ED2D296C1A001B421C /* Network.swift in Sources */,
+				635EC4E02D284AC6001B421C /* URL.swift in Sources */,
+				635EC4F02D297404001B421C /* MangasVM.swift in Sources */,
+				635EC4EA2D2967C2001B421C /* NetworkInteractor.swift in Sources */,
+				635EC4E42D29636F001B421C /* NetworkError.swift in Sources */,
+				635EC4E82D29650A001B421C /* URLSession.swift in Sources */,
+				635EC4DB2D16F27C001B421C /* ModelDTO.swift in Sources */,
+				635C35622D05033A00A4A159 /* ContentView.swift in Sources */,
+				635EC4E22D2852EC001B421C /* URLRequest.swift in Sources */,
+				635C35632D05033A00A4A159 /* Mis_MangasApp.swift in Sources */,
+				635EC4DD2D16F345001B421C /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "luis-david-diaz-ramirez.Mis-Mangas";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -297,7 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "luis-david-diaz-ramirez.Mis-Mangas";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
