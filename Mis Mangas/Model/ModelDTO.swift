@@ -63,10 +63,10 @@ struct MisMangaDTO: Codable {
 
 extension MisMangaDTO {
     var toManga: Manga? {
-        let mappedThemes = themes.compactMap { Manga.Theme(rawValue: $0.theme) }
-        let mappedAuthors = authors.map { Manga.Author(lastName: $0.lastName, firstName: $0.firstName, id: UUID(uuidString: $0.id)!, role: $0.role) }
-        let mappedGenres = genres.compactMap { Manga.Genre(rawValue: $0.genre) }
-        let mappedDemographics = demographics.compactMap { Manga.Demographic(rawValue: $0.demographic) }
+        let mappedThemes = themes.compactMap { ThemeModel(rawValue: $0.theme) }
+        let mappedAuthors = authors.map { AuthorModel(lastName: $0.lastName, firstName: $0.firstName, id: UUID(uuidString: $0.id)!, role: $0.role) }
+        let mappedGenres = genres.compactMap { GenreModel(rawValue: $0.genre) }
+        let mappedDemographics = demographics.compactMap { DemographicModel(rawValue: $0.demographic) }
         guard !mappedThemes.isEmpty,
               !mappedAuthors.isEmpty,
               !mappedGenres.isEmpty,
