@@ -18,24 +18,15 @@ struct ContentView: View {
                             Text(genre.genre.rawValue)
                                 .font(.headline)
                             Spacer()
-                            NavigationLink("Ver todos") {
-                                Text("hola")
+                            NavigationLink(value: genre.genre) {
+                                Text("Ver más")
                             }
                         }
                         ScrollView(.horizontal, showsIndicators: false){
                             HStack(spacing: 16){
                                 ForEach(genre.mangas) { manga in
                                     VStack{
-                                        AsyncImage(url: manga.mainPicture){ image in
-                                            image.resizable()
-                                                .scaledToFit()
-                                                .frame(width: 100, height: 150)
-                                                .clipShape(
-                                                    RoundedRectangle(cornerRadius: 10)
-                                                )
-                                        } placeholder: {
-                                            ProgressView()
-                                        }
+                                        ImageView(url: manga.mainPicture)
                                     }
                                 }
                             }
@@ -45,6 +36,9 @@ struct ContentView: View {
             }
             .padding()
             .navigationTitle("Mangas")
+            .navigationDestination(for: GenreModel.self) { genre in
+                Text("\(genre)")
+            }
             // .searchable(text: $vm.search, prompt: "Buscar Manga")
         }
     }

@@ -30,7 +30,7 @@ final class MangasVM {
         for genre in genres {
             do{
                 let mangasByGenre = try await network.getMangasByGenre(genre: genre)
-                //print(mangasByGenre[0].title)
+                if mangasByGenre.isEmpty{ continue }
                 mangas.append((genre: genre, mangas: mangasByGenre))
             }catch{
                 self.errorMsg = error.localizedDescription
