@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var vm = MangasVM()
+    @Environment(MangasVM.self) private var vm: MangasVM
     var body: some View {
         NavigationStack{
             ScrollView(showsIndicators: false){
@@ -27,6 +27,8 @@ struct ContentView: View {
                                 ForEach(genre.mangas) { manga in
                                     VStack{
                                         ImageView(url: manga.mainPicture)
+                                            .frame(width: 100)
+                                            .clipShape(RoundedRectangle(cornerRadius: 10))
                                     }
                                 }
                             }
@@ -37,7 +39,7 @@ struct ContentView: View {
             .padding()
             .navigationTitle("Mangas")
             .navigationDestination(for: GenreModel.self) { genre in
-                Text("\(genre)")
+                ViewAllByGenre(genre: genre)
             }
             // .searchable(text: $vm.search, prompt: "Buscar Manga")
         }
@@ -45,5 +47,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(vm: MangasVM(network: NetworkTest()))
+    ContentView()
+        .environment(MangasVM(network: NetworkTest()))
 }

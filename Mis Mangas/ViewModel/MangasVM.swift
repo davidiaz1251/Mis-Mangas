@@ -11,6 +11,7 @@ import SwiftUI
 final class MangasVM {
     let network: DataRepository
     var mangas: [(genre: GenreModel, mangas: [Manga])] = []
+    var mangasGenre:[Manga] = []
     var genres: [GenreModel] = []
     
     var showAlert = false
@@ -36,6 +37,17 @@ final class MangasVM {
                 self.errorMsg = error.localizedDescription
                 showAlert.toggle()
             }
+        }
+    }
+    
+    func getMangaByGenre(genre: GenreModel) async{
+        do{
+            let mangasByGenre = try await network.getMangasByGenre(genre: genre)
+            print(mangasByGenre.count)
+            self.mangasGenre = mangasByGenre
+        }catch{
+            self.errorMsg = error.localizedDescription
+            showAlert.toggle()
         }
     }
     

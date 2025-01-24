@@ -16,8 +16,6 @@ struct ImageView: View {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 100)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
                    
             }else{
                 ProgressView()
