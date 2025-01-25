@@ -55,23 +55,20 @@ struct MisMangaDTO: Codable {
     let mainPicture: String
     let sypnosis: String
     let background: String?
-    let themes: [Theme]
+    let themes: [Theme]?
     let authors: [Author]
-    let genres: [Genre]
-    let demographics: [Demographic]
+    let genres: [Genre]?
+    let demographics: [Demographic]?
 }
 
 extension MisMangaDTO {
     var toManga: Manga? {
-        let mappedThemes = themes.compactMap { ThemeModel(rawValue: $0.theme) }
+        let mappedThemes = themes?.compactMap { ThemeModel(rawValue: $0.theme) } ?? []
         let mappedAuthors = authors.map { AuthorModel(lastName: $0.lastName, firstName: $0.firstName, id: UUID(uuidString: $0.id)!, role: $0.role) }
-        let mappedGenres = genres.compactMap { GenreModel(rawValue: $0.genre) }
-        let mappedDemographics = demographics.compactMap { DemographicModel(rawValue: $0.demographic) }
-        guard !mappedThemes.isEmpty,
-              !mappedAuthors.isEmpty,
-              !mappedGenres.isEmpty,
-              !mappedDemographics.isEmpty
-        else { return nil }
+        let mappedGenres = genres?.compactMap { GenreModel(rawValue: $0.genre) } ?? []
+        let mappedDemographics = demographics?.compactMap { DemographicModel(rawValue: $0.demographic) } ?? []
+        
+        guard !mappedAuthors.isEmpty else { return nil }
         
         return Manga(
             id: id,
