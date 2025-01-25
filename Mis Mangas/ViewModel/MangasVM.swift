@@ -10,8 +10,7 @@ import SwiftUI
 @Observable @MainActor
 final class MangasVM {
     let network: DataRepository
-    var mangas: [(genre: GenreModel, mangas: [Manga])] = []
-    var mangasGenre:[Manga] = []
+    var mangas: [Manga] = []
     var genres: [GenreModel] = []
     
     var showAlert = false
@@ -22,29 +21,16 @@ final class MangasVM {
     init(network: DataRepository = Network()) {
         self.network = network
         Task{
-            await self.getGenres()
-            await self.getMangas()
+            await self.getBestMangas()
         }
     }
     
-    func getMangas() async{
-        for genre in genres {
-            do{
-                let mangasByGenre = try await network.getMangasByGenre(genre: genre)
-                if mangasByGenre.isEmpty{ continue }
-                mangas.append((genre: genre, mangas: mangasByGenre))
-            }catch{
-                self.errorMsg = error.localizedDescription
-                showAlert.toggle()
-            }
-        }
-    }
+    
     
     func getMangaByGenre(genre: GenreModel) async{
         do{
             let mangasByGenre = try await network.getMangasByGenre(genre: genre)
-            print(mangasByGenre.count)
-            self.mangasGenre = mangasByGenre
+            self.mangas = mangasByGenre
         }catch{
             self.errorMsg = error.localizedDescription
             showAlert.toggle()
@@ -54,6 +40,17 @@ final class MangasVM {
     func getGenres() async{
         do{
             self.genres = try await network.getGenres()
+        }catch{
+            print(error.localizedDescription)
+            self.errorMsg = error.localizedDescription
+            showAlert.toggle()
+        }
+    }
+    
+    func getBestMangas() async{
+        do{
+            self.mangas = try await network.getBestMangas()
+            print("\(self.mangas.count)")
         }catch{
             print(error.localizedDescription)
             self.errorMsg = error.localizedDescription

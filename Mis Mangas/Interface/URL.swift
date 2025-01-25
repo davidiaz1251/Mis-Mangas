@@ -17,19 +17,11 @@ let api = URL(string: "https://mymanga-acacademy-5607149ebe3d.herokuapp.com")!
 //#endif
 
 extension URL{
-    static let getMangas = api.appending(path: "list/mangas")
-    static func getMangasPage(page: String, per: String) -> URL{
-        api.appending(path: "list/mangas").appending(queryItems:
-                                                        [.querys("page", page),
-                                                         .querys("per", per)])
+    static func getListMangas(endPoint: APIListEndpoint, page: String = "1", per: String = "10") -> URL{
+        api.appending(path: "list").appending(path: endPoint.path).appending(queryItems:
+                                                                                [.querys("page", page),
+                                                                                 .querys("per", per)])
     }
-    static func getMangaById( id: Int) -> URL{
-        api.appending(path: "list/mangas/\(id)")
-    }
-    static func getMangasByGenre(genre: String) -> URL{
-        api.appending(path: "list/mangaByGenre").appending(path: genre)
-    }
-    static let getGenres = api.appending(path: "list/genres")
 }
 
 extension URLQueryItem{
@@ -37,3 +29,5 @@ extension URLQueryItem{
         URLQueryItem(name: name, value: query)
     }
 }
+
+

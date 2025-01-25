@@ -32,6 +32,7 @@ final class ImageVM{
             let image = try await imageDownloader.image(from: url)
             self.image = image
         }catch{
+            print("\(url)")
             print(error)
         }
     }

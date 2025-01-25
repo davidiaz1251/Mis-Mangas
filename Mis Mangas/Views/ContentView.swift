@@ -12,40 +12,46 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             ScrollView(showsIndicators: false){
-                ForEach(vm.mangas, id: \.genre.rawValue) { genre in
-                    VStack(alignment: .leading) {
+                ForEach(vm.mangas){manga in
+                    NavigationLink(value: manga) {
                         HStack{
-                            Text(genre.genre.rawValue)
-                                .font(.headline)
-                            Spacer()
-                            NavigationLink(value: genre.genre) {
-                                Text("Ver más")
-                            }
-                        }
-                        ScrollView(.horizontal, showsIndicators: false){
-                            HStack(spacing: 16){
-                                ForEach(genre.mangas) { manga in
-                                    VStack{
-                                        ImageView(url: manga.mainPicture)
-                                            .frame(width: 100)
-                                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            ImageView(url: manga.mainPicture)
+                                .frame(width: 100)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                            VStack(alignment: .leading){
+                                Text(manga.title)
+                                Text(manga.titleJapanese)
+                                HStack{
+                                    Text("Capítulos: \(manga.chapters ?? 0)")
+                                    Text("|")
+                                    Text("Volúmenes: \(manga.volumes ?? 0)")
+                                }
+                                HStack{
+                                    Text("Generos: ")
+                                    ForEach(manga.genres.prefix(2)){genre in
+                                        Text("\(genre.rawValue),")
+                                            .font(.subheadline)
                                     }
                                 }
+                                Text("Score: \(manga.score.formatted(.number.precision(.fractionLength(0...2))))")
+                                Spacer()
                             }
+                            Spacer()
                         }
                     }
+                    .buttonStyle(PlainButtonStyle())
                 }
             }
             .padding()
-            .navigationTitle("Mangas")
-            .navigationDestination(for: GenreModel.self) { genre in
-                ViewAllByGenre(genre: genre)
+            .navigationTitle("Best Mangas")
+            .navigationDestination(for: Manga.self) { manga in
+                Text(manga.title)
             }
-            // .searchable(text: $vm.search, prompt: "Buscar Manga")
         }
     }
 }
-
+/*.scrollTargetLayout()
+ .scrollTargetBehavior(.viewAligned)*/
 #Preview {
     ContentView()
         .environment(MangasVM(network: NetworkTest()))
