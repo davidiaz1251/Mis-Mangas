@@ -12,8 +12,24 @@ struct Mis_MangasApp: App {
     @State var vm = MangasVM()
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(vm)
+            TabView{
+                ContentView()
+                    .environment(vm)
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                
+                Text("Search")
+                    .tabItem {
+                        Label("Search", systemImage: "magnifyingglass")
+                    }
+                
+                Text("Favorito")
+                    .tabItem {
+                        Label("Favorite", systemImage: "heart")
+                    }
+            }
         }
     }
 }
+
