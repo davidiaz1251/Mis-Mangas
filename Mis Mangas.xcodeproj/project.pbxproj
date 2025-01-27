@@ -28,6 +28,7 @@
 		635EC4FF2D36E1D6001B421C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC4FE2D36E1D6001B421C /* UIImage.swift */; };
 		635EC5012D36E778001B421C /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC5002D36E778001B421C /* ImageView.swift */; };
 		E91CDF882D44FA1F00565D8D /* PathAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91CDF872D44FA1F00565D8D /* PathAPI.swift */; };
+		E91CDF8A2D46DC8500565D8D /* DetailMangaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91CDF892D46DC8500565D8D /* DetailMangaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		635EC4FE2D36E1D6001B421C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		635EC5002D36E778001B421C /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		E91CDF872D44FA1F00565D8D /* PathAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathAPI.swift; sourceTree = "<group>"; };
+		E91CDF892D46DC8500565D8D /* DetailMangaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMangaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				635EC5002D36E778001B421C /* ImageView.swift */,
+				E91CDF892D46DC8500565D8D /* DetailMangaView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				635EC4EA2D2967C2001B421C /* NetworkInteractor.swift in Sources */,
 				635EC4FF2D36E1D6001B421C /* UIImage.swift in Sources */,
 				635EC4E42D29636F001B421C /* NetworkError.swift in Sources */,
+				E91CDF8A2D46DC8500565D8D /* DetailMangaView.swift in Sources */,
 				635EC5012D36E778001B421C /* ImageView.swift in Sources */,
 				635EC4E82D29650A001B421C /* URLSession.swift in Sources */,
 				635EC4DB2D16F27C001B421C /* ModelDTO.swift in Sources */,
