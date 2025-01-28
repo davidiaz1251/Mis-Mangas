@@ -17,6 +17,7 @@ struct ContentView: View {
                         HStack(spacing: 16){
                             ForEach(0..<10) { index in
                                 ImageView(url: URL(string: "https://cdn.myanimelist.net/images/manga/3/161939l.jpg"))
+                                    .scaledToFit()
                                     .frame(width: 180)
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                     .overlay {
@@ -54,6 +55,7 @@ struct ContentView: View {
                         NavigationLink(value: manga) {
                             HStack{
                                 ImageView(url: manga.mainPicture)
+                                    .scaledToFit()
                                     .frame(width: 100)
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                 VStack(alignment: .leading){
@@ -85,7 +87,7 @@ struct ContentView: View {
             .padding()
             .navigationTitle("Best Mangas")
             .navigationDestination(for: Manga.self) { manga in
-                Text(manga.title)
+                DetailMangaView(manga: manga)
             }
         }
     }

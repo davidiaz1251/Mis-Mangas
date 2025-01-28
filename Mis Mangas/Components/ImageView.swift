@@ -15,8 +15,6 @@ struct ImageView: View {
             if let image = vm.image{
                 Image(uiImage: image)
                     .resizable()
-                    .scaledToFit()
-                   
             }else{
                 ProgressView()
             }

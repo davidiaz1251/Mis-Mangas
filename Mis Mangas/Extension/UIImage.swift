@@ -14,11 +14,4 @@ extension UIImage{
         let size = CGSize(width: width, height: height)
         return await byPreparingThumbnail(ofSize: size)
     }
-    
-    func resizedImage(width: CGFloat)  -> UIImage? {
-        let scale = width / self.size.width
-        let height = self.size.height * scale
-        let size = CGSize(width: width, height: height)
-        return preparingThumbnail(of: size)
-    }
 }

@@ -156,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				635EC5002D36E778001B421C /* ImageView.swift */,
-				E91CDF892D46DC8500565D8D /* DetailMangaView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -173,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				635C355D2D05033A00A4A159 /* ContentView.swift */,
+				E91CDF892D46DC8500565D8D /* DetailMangaView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
