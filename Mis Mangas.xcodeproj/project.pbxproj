@@ -29,6 +29,7 @@
 		635EC5012D36E778001B421C /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EC5002D36E778001B421C /* ImageView.swift */; };
 		E91CDF882D44FA1F00565D8D /* PathAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91CDF872D44FA1F00565D8D /* PathAPI.swift */; };
 		E91CDF8A2D46DC8500565D8D /* DetailMangaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91CDF892D46DC8500565D8D /* DetailMangaView.swift */; };
+		E99093FA2D4B634400FC2AEE /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99093F92D4B634400FC2AEE /* SummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		635EC5002D36E778001B421C /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		E91CDF872D44FA1F00565D8D /* PathAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathAPI.swift; sourceTree = "<group>"; };
 		E91CDF892D46DC8500565D8D /* DetailMangaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMangaView.swift; sourceTree = "<group>"; };
+		E99093F92D4B634400FC2AEE /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				635C355D2D05033A00A4A159 /* ContentView.swift */,
 				E91CDF892D46DC8500565D8D /* DetailMangaView.swift */,
+				E99093F92D4B634400FC2AEE /* SummaryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				E91CDF8A2D46DC8500565D8D /* DetailMangaView.swift in Sources */,
 				635EC5012D36E778001B421C /* ImageView.swift in Sources */,
 				635EC4E82D29650A001B421C /* URLSession.swift in Sources */,
+				E99093FA2D4B634400FC2AEE /* SummaryView.swift in Sources */,
 				635EC4DB2D16F27C001B421C /* ModelDTO.swift in Sources */,
 				635C35622D05033A00A4A159 /* ContentView.swift in Sources */,
 				635EC4E22D2852EC001B421C /* URLRequest.swift in Sources */,
